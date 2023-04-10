@@ -143,11 +143,11 @@ jobs:
               ) || format('{0}:{1}', env.IMAGE_NAME, needs.config.outputs.version_or_latest)
             ) }}
         with:
-          progress: plain
           context: .
           builder: ${{ steps.buildx.outputs.name }}
           file: ./Dockerfile
           build-args: |
+            --progress plain
             BASE_IMAGE=${{ matrix.base_image }}
             BASE_RUNTIME_IMAGE=${{ matrix.base_runtime_image }}
             PYTHON_VERSION=${{ env.PYTHON_VERSION }}
