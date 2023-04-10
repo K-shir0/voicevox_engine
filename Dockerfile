@@ -144,7 +144,7 @@ RUN <<EOF
         tk-dev \
         libffi-dev \
         liblzma-dev \
-        python-openssl \
+        python3-openssl \
         git
     apt-get clean
     rm -rf /var/lib/apt/lists/*

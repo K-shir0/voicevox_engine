@@ -30,6 +30,7 @@ jobs:
         tag:
           - ""
           - cpu
+          - cpu-ubuntu22.04
           - cpu-ubuntu20.04
 
     steps:
